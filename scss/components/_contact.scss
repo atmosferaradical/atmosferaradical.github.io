@@ -1,0 +1,21 @@
+#contact {
+  background: url(../images/background2.webp) center 45% / cover no-repeat;
+
+  .card {
+    filter: drop-shadow(0 0 8px rgb(0, 0, 0));
+  }
+}
+
+@media screen and (min-width: $screen-desktop) {
+  #contact {
+    .contact__start {
+      .flex {
+        flex-direction: row;
+      }
+    }
+
+    .card {
+      filter: drop-shadow(0 0 16px rgb(0, 0, 0));
+    }
+  }
+}

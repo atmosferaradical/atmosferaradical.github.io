@@ -1,0 +1,72 @@
+@use 'sass:math';
+
+#hero {
+  .player {
+    background-color: $color-dark;
+    border-radius: 6px;
+    filter: drop-shadow(0 0 8px rgb(0, 0, 0));
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 100%;
+
+    video {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  .social-icons {
+    a:any-link {
+      background-color: rgba($color-darker, .33);
+      color: $color-lighter;
+
+      &:hover {
+        color: $color-link;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: calc($screen-tablet - 1px)) {
+  #hero {
+    .logo {
+      &--small {
+        display: none;
+      }
+
+      &--large {
+        background: url(../images/logo.webp) center / cover no-repeat;
+        padding-bottom: 32.43%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $screen-tablet) {
+  #hero {
+    .overlay {
+      min-height: 100vh;
+    }
+
+    .player {
+      filter: drop-shadow(0 0 16px rgb(0, 0, 0));
+    }
+
+    .logo {
+      &--large {
+        display: none;
+      }
+
+      &--small {
+        background: url(../images/logo-small.webp) center / cover no-repeat;
+        height: 48px;
+        width: 148px;
+      }
+    }
+  }
+}

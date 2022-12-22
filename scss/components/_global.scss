@@ -1,0 +1,37 @@
+header {
+  background: url(../images/background.webp) center / cover no-repeat;
+}
+
+.overlay {
+  background-color: rgba($color-primary, .67);
+  padding: 64px 8px;
+}
+
+main {
+  section:not(#contact) {
+    padding: 64px 8px;
+  }
+}
+
+footer {
+  background-color: $color-dark;
+  color: $color-lighter;
+  padding: 24px 8px 32px;
+
+  .footer__end {
+    border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: 16px;
+  }
+}
+
+@media screen and (min-width: $screen-tablet) {
+  .overlay {
+    padding: 96px 8px;
+  }
+  
+  main {
+    section:not(#contact) {
+      padding: 96px 8px;
+    }
+  }
+}
